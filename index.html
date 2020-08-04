@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -26,7 +27,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <nav class="navbar navbar-expand-lg px-0">
+              <nav class="navbar navbar-expand-lg px-0" id="navbar">
                 <a class="navbar-brand" href="#">
                   <p class="brand-text">
                     Marharyta
@@ -53,21 +54,15 @@
                   <div class="mr-auto"></div>
                   <ul class="navbar-nav mt-2 mt-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link item-active" href="#"
-                        >Home <span class="sr-only">(current)</span></a
+                      <a class="nav-link" href="#home"
+                        >Home<span class="sr-only">(current)</span></a
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Work</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#projects">Last projects</a>
                     </li>
                   </ul>
                 </div>
@@ -76,8 +71,256 @@
           </div>
         </div>
       </header>
-      <main></main>
-      <footer></footer>
+      <div
+        class="scrollspy"
+        data-spy="scroll"
+        data-target="#navbar"
+        data-offset="100"
+      >
+        <main>
+          <section class="bussines-card" id="home">
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-sm-12 col-md-6 d-flex align-items-center align-items-md-start flex-column justify-content-center"
+                >
+                  <p class="card-name">Marharyta Kovalchuk</p>
+                  <p class="card-position">Junior Frontend Developer</p>
+                  <ul class="card-socials d-flex">
+                    <li>
+                      <a
+                        class="card-github"
+                        href="https://github.com/margaritakovalchuk"
+                        target="_blank"
+                        ><i class="fa fa-github"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="card-linkedin"
+                        href="https://www.linkedin.com/in/marharytakovalchuk/"
+                        target="_blank"
+                        ><i class="fa fa-linkedin" aria-hidden="true"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="card-facebook"
+                        href="https://www.facebook.com/marharyta.kovalchuk"
+                        target="_blank"
+                      >
+                        <i class="fa fa-facebook" aria-hidden="true"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="card-telegram"
+                        href="https://t.me/rita_lpo"
+                        target="_blank"
+                        ><i class="fa fa-telegram" aria-hidden="true"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <img
+                    class="d-flex mx-auto ml-md-auto img-fluid"
+                    src="assets/images/mockup/avatar-01.png"
+                    alt="My photo"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="about" id="about">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-5">
+                  <img
+                    class="d-flex mr-md-auto mr-auto ml-auto ml-md-0 img-fluid"
+                    src="assets/images/mockup/avatar-01.png"
+                    alt="My photo"
+                  />
+                </div>
+                <div class="col-12 col-md-7">
+                  <div class="about-me">
+                    <p class="heading about-header">About Me</p>
+                    <p class="description about-description">
+                      orem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a class="link about-download" href="#" download>
+                      download my cv
+                    </a>
+                  </div>
+                  <div class="skills">
+                    <p class="heading header-skills">My Skills</p>
+                    <div class="skills-wrapper">
+                      <div class="skill-container">
+                        <div class="skill">
+                          <span class="skill-title">Lorem, ipsum.</span>
+                          <span class="skill-progress">90 %</span>
+                        </div>
+                        <div class="skill-bar">
+                          <div class="skill-all"></div>
+                          <div class="skill-current"></div>
+                        </div>
+                      </div>
+                      <div class="skill-container">
+                        <div class="skill">
+                          <span class="skill-title">Lorem, ipsum.</span>
+                          <span class="skill-progress">90 %</span>
+                        </div>
+                        <div class="skill-bar">
+                          <div class="skill-all"></div>
+                          <div class="skill-current"></div>
+                        </div>
+                      </div>
+                      <div class="skill-container">
+                        <div class="skill">
+                          <span class="skill-title">Lorem, ipsum.</span>
+                          <span class="skill-progress">90 %</span>
+                        </div>
+                        <div class="skill-bar">
+                          <div class="skill-all"></div>
+                          <div class="skill-current"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="projects" id="projects">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="heading projects-header">Latest projects</p>
+                </div>
+                <div class="col-12 p-0">
+                  <div class="works-container">
+                    <div class="container">
+                      <div class="row">
+                        <!--Lotos-->
+                        <div
+                          class="col-12 col-md-4 d-flex flex-column justify-content-between"
+                        >
+                          <div class="work-wrapper">
+                            <img
+                              class="img-fluid"
+                              src="assets/images/lotos.png"
+                              alt=""
+                            />
+                            <div
+                              class="work-title-wapper d-flex align-items-start"
+                            >
+                              <p class="sub-heading work-title">
+                                Lotos
+                              </p>
+                              <span class="work-label">Markup</span>
+                            </div>
+                            <p class="description work-description">
+                              HTML, CSS, Gulp
+                            </p>
+                          </div>
+                          <div class="work-button-wrapper">
+                            <a class="link" href="#" target="_blank"
+                              >Visit page</a
+                            >
+                            <a
+                              class="link"
+                              href="https://github.com/margaritakovalchuk/lotus"
+                              target="_blank"
+                              >Page sourse</a
+                            >
+                          </div>
+                        </div>
+                        <!--Test-task-->
+                        <div
+                          class="col-12 col-md-4 d-flex flex-column justify-content-between"
+                        >
+                          <div class="work-wrapper">
+                            <img
+                              class="img-fluid"
+                              src="assets/images/test-task.jpg"
+                              alt=""
+                            />
+                            <div class="work-title-wapper d-flex align-center">
+                              <p class="sub-heading work-title">
+                                Landing page of web-studio
+                              </p>
+                              <span class="work-label">Markup</span>
+                            </div>
+                            <p class="description work-description">
+                              HTML, CSS, Gulp, PUG, SASS
+                            </p>
+                          </div>
+                          <div class="work-button-wrapper">
+                            <a
+                              class="link about-download"
+                              href="https://margaritakovalchuk.github.io/studio/"
+                              >Visit page</a
+                            >
+                            <a
+                              class="link about-download"
+                              href="https://github.com/margaritakovalchuk/Test-task"
+                              >Page sourse</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="paralax">
+            <div class="parallax d-flex align-items-center">
+              <div class="container">
+                <div class="row">
+                  <div
+                    class="col-10 mx-auto d-flex justify-content-center flex-column"
+                  >
+                    <p class="parallax-header">
+                      Lorem ipsum dolor sit amet consectetur adipi
+                    </p>
+                    <p class="parallax-content">
+                      Lorem ipsum dolor, sit amet c
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="footer-main">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <p class="heading footer-main-header">Contact Me</p>
+                  <p class="description footer-main-description">
+                    In case you have any questions don`t hesitate to contact me
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-rights">
+            <div class="container">
+              <div class="row"><div class="col-12"></div></div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
