@@ -1,0 +1,374 @@
+:root {
+  --main-bg-color: #fafafa;
+  --main-accent-color: #17bed2;
+  --main-heading-color: #515769;
+  --main-text-color: #a6a7aa;
+  --main-font-family: Hind, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: var(--main-font-family);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+/******************Header********************/
+header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.brand-text {
+  color: #353535;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: calc(19.2px + 3.2 * (100vw / 1080));
+}
+
+.brand-text__blue {
+  color: var(--main-accent-color);
+}
+
+.navbar-nav .nav-item a.nav-link {
+  padding: 1rem 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--main-heading-color);
+  font-weight: 600;
+}
+.navbar-nav .nav-item a.nav-link:last-child {
+  padding: 1rem 0 1rem 3.5rem;
+}
+
+.nav-link::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.14rem;
+  background-color: var(--main-accent-color);
+  position: absolute;
+  left: 2rem;
+  top: calc((100% - 0.4rem) / 2);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.nav-item:focus,
+.nav-link {
+  outline: none;
+}
+
+.nav-item:focus .nav-link::before {
+  opacity: 1;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.nav-link.active::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.14rem;
+  background-color: var(--main-accent-color);
+  position: absolute;
+  left: 2rem;
+  top: calc((100% - 0.4rem) / 2);
+  opacity: 1;
+}
+
+.navbar-toggler {
+  padding: 0;
+  width: 1.5rem;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon,
+.navbar-toggler:hover .navbar-toggler-icon::before,
+.navbar-toggler:hover .navbar-toggler-icon::after {
+  width: 1.5rem;
+  background-color: var(--main-accent-color);
+  transition: 0.3s linear;
+}
+
+.navbar-toggler:not(:hover) .navbar-toggler-icon,
+.navbar-toggler:not(:hover) .navbar-toggler-icon::before,
+.navbar-toggler:not(:hover) .navbar-toggler-icon::after {
+  transition: 0.3s linear;
+}
+
+.navbar-toggler-icon {
+  background-color: #000000;
+  height: 0.1rem;
+  width: 1.2rem;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  height: 0.07rem;
+  background-color: #000000;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -0.38rem;
+  width: 0.65rem;
+}
+
+.navbar-toggler-icon::after {
+  width: 1.5rem;
+  bottom: -0.38rem;
+}
+
+.scrollspy {
+  position: relative;
+  /*8if enable makes second scrol*/
+  /* overflow-y: scroll; */
+  height: 100vh;
+}
+
+.bussines-card {
+  background-color: var(--main-bg-color);
+  padding-top: 4rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item a.nav-link:last-child {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+  }
+
+  .nav-link.active::before {
+    left: 0.3rem;
+  }
+
+  .nav-link::before {
+    left: 0.3rem;
+  }
+}
+
+/* @media (max-width: 575.98px) {
+} */
+
+@media (max-width: 768px) {
+  .card-name {
+    text-align: center;
+  }
+
+  .card-socials {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .link {
+    padding: 1rem 0.6rem;
+  }
+}
+
+/* @media (min-width: 768px) and (max-width: 1200px) {
+  a.about-download {
+    padding: 0.6rem 1.6rem;
+  }
+} */
+
+.card-name {
+  font-size: calc(48px + 16 * (100vw / 1080));
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--main-heading-color);
+  margin-bottom: 0.7rem;
+}
+
+.card-position {
+  font-size: calc(24px + 1 * (100vw / 1080));
+  color: var(--main-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.card-socials .fa {
+  color: var(--main-heading-color);
+  font-size: 2.2em;
+}
+
+.card-socials li {
+  margin-right: 1rem;
+}
+
+.card-socials a:hover i {
+  color: var(--main-accent-color);
+  transition: 0.3s;
+}
+
+.about,
+.projects,
+.footer-main {
+  padding: 3rem 0;
+}
+
+.heading,
+.sub-heading {
+  font-size: 1.75rem;
+  color: var(--main-heading-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.description {
+  color: var(--main-text-color);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.link {
+  color: var(--main-heading-color);
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: #f3f4f5;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.link:focus,
+.link:hover {
+  background-color: var(--main-accent-color);
+  color: var(--main-bg-color);
+  text-decoration: none;
+}
+
+.about-me {
+  border-bottom: 1px solid #f3f4f5;
+  padding: 3rem 0;
+}
+
+.skill-container {
+  margin-bottom: 1.2rem;
+}
+
+.skills {
+  padding: 3rem 0;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.skill-title {
+  color: var(--main-heading-color);
+  font-weight: 700;
+  font-size: 14px;
+}
+.skill-progress {
+  color: var(--main-heading-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.skill-bar {
+  position: relative;
+}
+
+.skill-all {
+  background-color: #f3f4f5;
+  width: 100%;
+  height: 3px;
+}
+
+.skill-current {
+  background-color: var(--main-accent-color);
+  width: 80%;
+  position: absolute;
+  height: 3px;
+  top: 0;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+}
+
+.work-label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--main-heading-color);
+}
+
+.works-container img {
+  margin-bottom: 1rem;
+}
+
+.work-title {
+  margin-right: 1rem;
+}
+
+.parallax {
+  background-image: url(../assets/images/1920x1080/01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 350px;
+  height: auto;
+  color: var(--main-bg-color);
+}
+
+.parallax p {
+  text-align: center;
+}
+
+.parallax-header {
+  font-size: calc(32px + 10 * (100vw / 1080));
+  font-weight: 600;
+  line-height: calc(2px + 2ex + 2px); /*flexible line-height*/
+  margin-bottom: 1.5rem;
+}
+
+.parallax-content {
+  font-size: 1.25rem;
+}
+
+.footer-main {
+  background-color: #f3f4f5;
+}
+
+.footer-main-info li:not(:last-of-type) {
+  margin-right: 5rem;
+}
+
+.footer-main-info li :first-child {
+  font-size: 22px;
+  color: var(--main-heading-color);
+}
+
+.footer-main-info li :last-child {
+  font-size: 0.8rem;
+  color: var(--main-text-color);
+}
+
+.footer-main-info li :last-child:hover {
+  color: #cccccf;
+  text-decoration: none;
+}
